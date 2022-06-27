@@ -3,7 +3,8 @@ function twoSum(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const currentValue = nums[i]
     const neededValue = target - currentValue
-    if (previousValues[neededValue] != null) {
+    const solution = previousValues[neededValue]
+    if ( solution != null) {
       return [previousValues[neededValue], i]
     } else {
       previousValues[currentValue] = i
